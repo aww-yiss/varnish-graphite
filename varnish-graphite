@@ -40,7 +40,7 @@ class GraphiteClient:
         self.sock = None
         logging.warning("Connection failed. Re-trying on the next interval")
     if self.sock != None:
-      logging.info("Connected to {}:{}".format(self.host, self.port))
+      logging.info("Connected to {}:{}".format(self.host, int(self.port)))
 
   def send_metrics(self, metrics):
     if self.sock == None:
